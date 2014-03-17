@@ -1,1 +1,1 @@
-mysql -uroot -p < db/baseline_teamb.sql
+mysql -uroot < db/baseline_teamb.sql

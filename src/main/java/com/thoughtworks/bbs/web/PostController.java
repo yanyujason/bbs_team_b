@@ -140,6 +140,7 @@ public class PostController {
             //return new ModelAndView("home", "posts", postService.findMainPostByAuthorName(principal.getName()));
            return "redirect:/";
         }
+
     @RequestMapping(value = {"/like/{postId}"}, method = RequestMethod.GET)
     public String add1LikedTime(@PathVariable("postId") Long postId,@RequestHeader("Referer") String referer, Principal principal) {
         if(principal == null){

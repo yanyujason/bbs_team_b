@@ -170,7 +170,6 @@ public class UserController {
         return new ModelAndView("user/users", map);
     }
 
-
     @RequestMapping(value = {"/updateProfile"}, method = RequestMethod.POST)
     public ModelAndView processUpdateProfile(ModelMap model, HttpServletRequest request, Principal principal) throws IOException {
 
@@ -208,7 +207,6 @@ public class UserController {
 
     }
 
-
     @RequestMapping(value = {"/dis/{id}"}, method = RequestMethod.GET)
     public String disableUser(@PathVariable("id") Long userId, Principal principal) {
         User user = userService.getByUserId(userId);
@@ -217,6 +215,7 @@ public class UserController {
 
         return "redirect:/user/users";
     }
+
     @RequestMapping(value = {"/authorise/{id}"},method = RequestMethod.GET)
     public String authoriseUser(@PathVariable("id") Long userId,Principal principal){
         UserRole userRole = userRoleService.getByUserId(userId);
